@@ -49,4 +49,6 @@
     <string name="smartphone_size_secondary">256 GB</string>
     <string name="add_to_cart">Add to Cart $1500.00</string>
     <string name="details_title">Details</string>
+    <string name="location">Pick location!</string>
+    <string name="checkout">Yay!</string>
 </resources>
