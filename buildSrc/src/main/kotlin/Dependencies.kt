@@ -12,10 +12,12 @@ object Dependencies {
         private const val ktxCoreVersion = "1.9.0"
         private const val appCompatVersion = "1.5.1"
         private const val materialVersion = "1.7.0"
+        private const val constraintVersion = "2.1.4"
 
         const val ktxCore = "androidx.core:core-ktx:$ktxCoreVersion"
         const val appCompat = "androidx.appcompat:appcompat:$appCompatVersion"
         const val material = "com.google.android.material:material:$materialVersion"
+        const val constraint = "androidx.constraintlayout:constraintlayout:$constraintVersion"
     }
 
     object TestDependencies {
@@ -47,10 +49,11 @@ object Dependencies {
             "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:$adapterVersion"
     }
 
-    object Modules {
-        private const val uiModule = "moduleUI"
+    object Lifecycle {
+        private const val lifecycleVersion = "2.5.1"
 
-        const val UI = ":$uiModule"
+        const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+        const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     }
 
     object Koin {
