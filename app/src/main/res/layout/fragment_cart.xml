@@ -1,187 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.cart.CartFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/cart_button_back"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="36dp"
-        app:cornerRadius="10dp"
-        android:backgroundTint="@color/secondaryColor"
-        app:icon="@drawable/icon_backarrow"
-        app:iconSize="20dp"
-        app:iconTint="@color/buttons_background"
-        app:iconGravity="start"
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:theme="@style/EcommerceConceptThemes"
-        android:insetBottom="0dp"
-        android:insetLeft="0dp"
-        android:insetRight="0dp"
-        android:insetTop="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/cart_title_city"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="92dp"
-        android:text="@string/add_address"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/cart_button_cart"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginTop="36dp"
-        app:cornerRadius="10dp"
-        android:padding="8dp"
-        android:backgroundTint="@color/primaryColor"
-        app:icon="@drawable/icon_location_pin"
-        app:iconSize="20dp"
-        app:iconTint="@color/buttons_background"
-        app:iconGravity="start"
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:theme="@style/EcommerceConceptThemes"
-        android:insetBottom="0dp"
-        android:insetLeft="0dp"
-        android:insetRight="0dp"
-        android:insetTop="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/cart_body_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/cart_subtitle"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
-        android:textSize="36sp"
-        android:textColor="@color/secondaryColor"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cart_button_back"/>
-
-    <com.google.android.material.card.MaterialCardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@color/secondaryColor"
-        android:theme="@style/EcommerceConceptThemes"
-        app:shapeAppearance="@style/EcommerceConceptThemes.FilterCard"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cart_body_title"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_height="match_parent"
+        tools:context=".fragments.cart.CartFragment">
 
-        <LinearLayout
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cart_button_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="36dp"
+            app:cornerRadius="10dp"
+            android:backgroundTint="@color/secondaryColor"
+            app:icon="@drawable/icon_backarrow"
+            app:iconSize="20dp"
+            app:iconTint="@color/buttons_background"
+            app:iconGravity="start"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:theme="@style/EcommerceConceptThemes"
+            android:insetBottom="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:insetTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/cart_title_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="92dp"
+            android:text="@string/add_address"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cart_button_location"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="46dp"
+            android:layout_marginTop="36dp"
+            app:cornerRadius="10dp"
+            android:padding="8dp"
+            android:backgroundTint="@color/primaryColor"
+            app:icon="@drawable/icon_location_pin"
+            app:iconSize="20dp"
+            app:iconTint="@color/buttons_background"
+            app:iconGravity="start"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:theme="@style/EcommerceConceptThemes"
+            android:insetBottom="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:insetTop="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/cart_body_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/cart_subtitle"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+            android:textSize="36sp"
+            android:textColor="@color/secondaryColor"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cart_button_back"/>
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/cart_recycler_purchase"
-                android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginBottom="12dp"
-                tools:listitem="@layout/cart_recycler_item"/>
-
-            <com.google.android.material.divider.MaterialDivider
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/divider_background"/>
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/secondaryColor"
+            android:theme="@style/EcommerceConceptThemes"
+            app:shapeAppearance="@style/EcommerceConceptThemes.FilterCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cart_body_title"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="56dp"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/cart_total"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                    android:textColor="@color/background"
-                    android:textSize="16sp"/>
-
-                <TextView
-                    android:id="@+id/cart_text_total_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="216dp"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/cart_total_price"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                    android:textColor="@color/background"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="56dp"
-                    android:layout_marginTop="12dp"
-                    android:text="@string/cart_delivery"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                    android:textColor="@color/background"
-                    android:textSize="16sp"/>
-
-                <TextView
-                    android:id="@+id/cart_text_delivery_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="194dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="26dp"
-                    android:text="@string/cart_delivery_price"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                    android:textColor="@color/background"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-
-            <com.google.android.material.divider.MaterialDivider
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/divider_background"/>
+                android:orientation="vertical">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/cart_button_checkout"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:layout_marginStart="44dp"
-                android:layout_marginEnd="44dp"
-                android:layout_marginTop="27dp"
-                android:layout_marginBottom="44dp"
-                android:text="@string/cart_checkout"
-                android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cart_recycler_purchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginBottom="12dp"
+                    tools:listitem="@layout/cart_recycler_item"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/divider_background"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="56dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/cart_total"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:textColor="@color/background"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/cart_text_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="216dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/cart_total_price"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:textColor="@color/background"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="56dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/cart_delivery"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:textColor="@color/background"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/cart_text_delivery_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="194dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="26dp"
+                        android:text="@string/cart_delivery_price"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                        android:textColor="@color/background"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/divider_background"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cart_button_checkout"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginEnd="44dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginBottom="44dp"
+                    android:text="@string/cart_checkout"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

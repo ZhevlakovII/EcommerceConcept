@@ -8,6 +8,10 @@
  * @param dependency Provided dependency
  */
 object Dependencies {
+    object Modules {
+        const val domain = ":domain"
+    }
+
     object AndroidComponents {
         private const val ktxCoreVersion = "1.9.0"
         private const val appCompatVersion = "1.5.1"
@@ -61,5 +65,32 @@ object Dependencies {
 
         const val koinCore = "io.insert-koin:koin-core:$koinVersion"
         const val koinAndroid = "io.insert-koin:koin-android:$koinVersion"
+    }
+
+    object Coroutines {
+        private const val coroutinesVersion = "1.6.4"
+
+        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    }
+
+    object Coil {
+        private const val coilVersion = "2.2.2"
+
+        const val coil = "io.coil-kt:coil:$coilVersion"
+    }
+
+    object Retrofit {
+        private const val retrofitVersion = "2.9.0"
+        private const val okHttpVersion = "4.10.0"
+
+        const val retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+        const val gsonConverter = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+        const val okHttp = "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+    }
+
+    object Gson {
+        private const val gsonVersion = "2.10"
+
+        const val gson = "com.google.code.gson:gson:$gsonVersion"
     }
 }

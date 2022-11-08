@@ -37,6 +37,8 @@ android {
 }
 
 dependencies {
+    implementation(project(Dependencies.Modules.domain))
+
     implementation(Dependencies.AndroidComponents.ktxCore)
     implementation(Dependencies.AndroidComponents.appCompat)
     implementation(Dependencies.AndroidComponents.material)
