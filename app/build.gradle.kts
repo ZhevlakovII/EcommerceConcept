@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -8,11 +10,15 @@ android {
     compileSdk = AppConfig.compileSdk
 
     defaultConfig {
-        applicationId = AppConfig.applicatonId
+        applicationId = AppConfig.applicationId
         minSdk = AppConfig.minSdk
         targetSdk = AppConfig.targetSdk
         versionCode = AppConfig.versionCode
         versionName = AppConfig.versionName
+
+        val projectProperties = readProperties(file("../api.properties"))
+
+        buildConfigField("String", "BASE_URL", projectProperties["BASE_URL"] as String)
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -37,6 +43,7 @@ android {
 }
 
 dependencies {
+    implementation(project(Dependencies.Modules.data))
     implementation(project(Dependencies.Modules.domain))
 
     implementation(Dependencies.AndroidComponents.ktxCore)
@@ -49,4 +56,20 @@ dependencies {
 
     implementation(Dependencies.Lifecycle.livedata)
     implementation(Dependencies.Lifecycle.viewmodel)
+
+    implementation(Dependencies.Coroutines.coroutines)
+
+    implementation(Dependencies.AdapterDelegates.adapterDelegates)
+    implementation(Dependencies.AdapterDelegates.adapterDelegatesViewBinding)
+
+    implementation(Dependencies.Koin.koinCore)
+    implementation(Dependencies.Koin.koinAndroid)
+
+    implementation(Dependencies.Coil.coil)
+}
+
+fun readProperties(propertiesFile: File) = Properties().apply {
+    propertiesFile.inputStream().use { fis ->
+        load(fis)
+    }
 }

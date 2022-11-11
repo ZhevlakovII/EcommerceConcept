@@ -11,7 +11,8 @@
 object AppConfig {
     const val namespace = "ru.izhxx.ecommerceconcept"
     const val domainNamespace = "ru.izhxx.domain"
-    const val applicatonId = "ru.izhxx.ecommerceconcept"
+    const val dataNamespace = "ru.izhxx.data"
+    const val applicationId = "ru.izhxx.ecommerceconcept"
 
     const val compileSdk = 33
     const val targetSdk = 33

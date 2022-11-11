@@ -1,5 +1,6 @@
 package ru.izhxx.ecommerceconcept.activities
 
+import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -12,10 +13,13 @@ import ru.izhxx.ecommerceconcept.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
+
+    private val binding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val bottomMenu: BottomNavigationView = binding.bottomMenu
@@ -33,5 +37,20 @@ class MainActivity : AppCompatActivity() {
                 else -> bottomMenu.visibility = View.VISIBLE
             }
         }
+    }
+
+    fun changeCartProducts(productsCount: Int) {
+        val badge = binding.bottomMenu.getOrCreateBadge(R.id.cart_fragment)
+        if (productsCount == 0) {
+            badge.isVisible = false
+            badge.clearNumber()
+        } else {
+            badge.isVisible = true
+            badge.number = productsCount
+        }
+    }
+
+    fun changeBottomMenuVisibility(visibility: Int) {
+        binding.bottomMenu.visibility = visibility
     }
 }

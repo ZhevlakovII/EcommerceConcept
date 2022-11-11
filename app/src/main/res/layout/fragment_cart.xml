@@ -81,17 +81,15 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:backgroundTint="@color/secondaryColor"
             android:theme="@style/EcommerceConceptThemes"
-            app:shapeAppearance="@style/EcommerceConceptThemes.FilterCard"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cart_body_title"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:shapeAppearance="@style/EcommerceConceptThemes.FilterCard">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -99,19 +97,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="240dp"
                     android:layout_marginStart="24dp"
-                    android:layout_marginEnd="32dp"
                     android:layout_marginTop="80dp"
+                    android:layout_marginEnd="32dp"
                     android:layout_marginBottom="12dp"
-                    tools:listitem="@layout/cart_recycler_item"/>
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/cart_recycler_item" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/divider_background"/>
+                    android:background="@color/divider_background" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
@@ -122,7 +121,7 @@
                         android:text="@string/cart_total"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                         android:textColor="@color/background"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/cart_text_total_price"
@@ -134,12 +133,12 @@
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                         android:textColor="@color/background"
                         android:textSize="16sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
@@ -150,7 +149,7 @@
                         android:text="@string/cart_delivery"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                         android:textColor="@color/background"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/cart_text_delivery_price"
@@ -163,27 +162,27 @@
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                         android:textColor="@color/background"
                         android:textSize="16sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/divider_background"/>
+                    android:background="@color/divider_background" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/cart_button_checkout"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
                     android:layout_marginStart="44dp"
-                    android:layout_marginEnd="44dp"
                     android:layout_marginTop="27dp"
+                    android:layout_marginEnd="44dp"
                     android:layout_marginBottom="44dp"
                     android:text="@string/cart_checkout"
                     android:textAllCaps="false"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 

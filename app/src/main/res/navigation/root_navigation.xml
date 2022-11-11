@@ -11,7 +11,7 @@
         android:label="@string/explorer_title"
         tools:layout="@layout/fragment_explorer">
         <action
-            android:id="@+id/action_explorerFragment_to_detailsFragment"
+            android:id="@+id/explorer_to_details"
             app:destination="@id/details_fragment"/>
     </fragment>
 
@@ -21,7 +21,7 @@
         android:label="@string/cart_title"
         tools:layout="@layout/fragment_cart">
         <action
-            android:id="@+id/action_cartFragment_to_explorerFragment"
+            android:id="@+id/cart_to_explorer"
             app:destination="@id/explorer_fragment"/>
     </fragment>
 
@@ -31,10 +31,10 @@
         android:label="@string/details_title"
         tools:layout="@layout/fragment_detail">
         <action
-            android:id="@+id/action_detailsFragment_to_explorerFragment"
+            android:id="@+id/details_to_explorer"
             app:destination="@id/explorer_fragment"/>
         <action
-            android:id="@+id/action_detailsFragment_to_cartFragment"
+            android:id="@+id/details_to_cart"
             app:destination="@id/cart_fragment"/>
     </fragment>
 

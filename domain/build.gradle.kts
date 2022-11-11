@@ -29,12 +29,5 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.AndroidComponents.ktxCore)
 
-    implementation(Dependencies.Koin.koinCore)
-    implementation(Dependencies.Koin.koinAndroid)
-
-    implementation(Dependencies.Lifecycle.livedata)
-
-    implementation(Dependencies.Coroutines.coroutines)
 }
