@@ -66,21 +66,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:paddingVertical="6dp"
         android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/detail_recycler_images"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/detail_title_city"/>
+        app:layout_constraintTop_toBottomOf="@id/detail_title_city" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:background="@color/primaryColor"
         android:theme="@style/EcommerceConceptThemes"
         app:shapeAppearance="@style/EcommerceConceptThemes.FilterCard"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_recycler"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/detail_recycler">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -287,6 +290,7 @@
                 android:text="@string/smartphone_size_primary"
                 android:textSize="12sp"
                 android:textAllCaps="false"
+                android:textColor="@color/text_color"
                 android:textAppearance="@style/TextAppearance.Material3.BodySmall"
                 android:textStyle="bold"
                 android:maxLines="1"

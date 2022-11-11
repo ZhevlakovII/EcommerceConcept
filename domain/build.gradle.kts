@@ -7,7 +7,7 @@ android {
     namespace = AppConfig.domainNamespace
     compileSdk = AppConfig.compileSdk
 
-    defaultAppConfig {
+    defaultConfig {
         minSdk = AppConfig.minSdk
         targetSdk = AppConfig.targetSdk
 
@@ -29,5 +29,5 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.AndroidComponents.ktxCore)
+
 }
